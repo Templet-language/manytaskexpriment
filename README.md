@@ -2,5 +2,6 @@
 # manytaskexpriment
 launching a many-tasking application in a hybrid cloud environment
 
+switch to lab mode: in address string https://********/tree -change to-> https://********/lab
 compile: g++ everest.cpp inteverest.cpp -o rrt -l curl
 run: ./rrt <number of blocks> <Everest login> <Everest password>
