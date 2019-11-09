@@ -8,6 +8,7 @@
 
 const int MAX_SUBMITTED_TASKS = 10;
 const int SLEEP_IN_SECONDS = 1;
+const bool DELETE_JOBS = false;
 
 using namespace std;
 
@@ -246,7 +247,7 @@ void on_sort_end(int i)
 
 int main(int argc, char *argv[])
 {
-	if (argc == 4 && sscanf_s(argv[1], "%d", &NUM_BLOCKS) == 1) {
+	if (argc == 4 && sscanf(argv[1], "%d", &NUM_BLOCKS) == 1) {
 
 		string USERNAME(argv[2]);
 		string PASSWORD(argv[3]);
@@ -279,6 +280,7 @@ int main(int argc, char *argv[])
 				it = submitted_task_list.begin();
 
 			// проверка статуса запущенных задач
+            cout << "----check out tasks----" << endl;
 			
 			while(it != submitted_task_list.end()){
 				submitted_task stask = *it;
@@ -333,7 +335,8 @@ int main(int argc, char *argv[])
 			}
 
 			// запускаем задачи
-			
+            cout << "----launch new tasks---" << endl;
+    			
 			while (!task_queue.empty() && submitted_tasks_num < MAX_SUBMITTED_TASKS) {
 				pair<int, int> t = task_queue.back();
 				task_queue.pop_back();
@@ -370,7 +373,6 @@ int main(int argc, char *argv[])
 		std::chrono::duration<double> diff = (end - start);
 
 		cout << "----------------------" << endl;
-		cout << "Block size: " << BLOCK_SIZE << " integers" << endl;
 		cout << "Number of blocks: " << NUM_BLOCKS << endl;
 		cout << "Max. number of submited tasks: " << MAX_SUBMITTED_TASKS << endl;
 		cout << "Execution time is: " << diff.count() << "s" << endl;

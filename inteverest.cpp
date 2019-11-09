@@ -13,7 +13,6 @@ const string LABEL = "round-robin-tournament";
 const std::string PREPARE_ID = "5ccaba85100000638af4eabe";
 const std::string PLAY_ID = "5d22422012000050bcf95406";
 const bool CURL_VERBOSE = false;
-const bool DELETE_JOBS = false;
 
 string ACCESS_TOKEN;
 
