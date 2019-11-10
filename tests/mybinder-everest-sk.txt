@@ -1,0 +1,15 @@
+
+1 file = 8 blocked Twitter dump files ~= 800 MB
+VM image: all-in-one, 1 core, agent delay = controller delay = 1s
+number of VM = num files
+
++-----------+-----------------------+-----------------------+-----------------+
+| num files |  seq sorting time, s  |  par sorting time, s  |     speedup     |
++-----------+-----------------------+-----------------------+-----------------+
+     2
+	 
+	 4
+	 
+	 8
+	 
+	 10
