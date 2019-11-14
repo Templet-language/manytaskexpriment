@@ -1,5 +1,5 @@
 #!/bin/bash
 
-conda install -c conda-forge xeus-cling
 g++ everest.cpp inteverest.cpp -o rrt -l curl
+
 jupyter lab workspaces import binder/workspace.json
