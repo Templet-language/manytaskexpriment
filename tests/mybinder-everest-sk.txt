@@ -3,7 +3,7 @@
 VM image: all-in-one, 1 core, agent delay = controller delay = 1s
 number of VM = num files
 
-synthetic dataset (one duplicated dump file)
+synthetic dataset (one flumedata block was duplicated 80 times)
 
 +-----------+-----------------------+-----------------------+--------------------+
 | num files |  seq sorting time, s  |  par sorting time, s  |    mid speedup     |
@@ -44,3 +44,46 @@ synthetic dataset (one duplicated dump file)
 	 10        472.994
 	           457.661    466.7
 			   469.448
+			   
+    real dataset (80 flumedata blocks, 8 blocks in one file)
+
++-----------+-----------------------+-----------------------+--------------------+
+| num files |  seq sorting time, s  |  par sorting time, s  |    mid speedup     |
++-----------+-----------------------+-----------------------+--------------------+
+     2        68.4562 
+	           
+			   
+				   
+	 3        114.838 
+               
+               		   
+	 
+				   
+	 4        183.547       
+	           
+			   
+	 
+	 5        245.916 
+	           
+			  
+	 
+	 6        330.048       
+	           
+			   
+	 
+	 7        409.327 
+	           
+			   
+	           
+	 8        484.539 
+	           
+			   
+	 
+	 9        599.583 
+	           
+			   
+	         
+	 10       814.518
+              	 
+	           
+			   	   
