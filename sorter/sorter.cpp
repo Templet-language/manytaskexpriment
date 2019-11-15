@@ -80,19 +80,9 @@ string block_version_to_formatted_string(int block_version)
 	}
 }
 
-string resolve_json_filename(int block_number, int block_version)
+string resolve_filename(int block_number, int block_version)
 {
 	return "E:\\file" + block_number_to_formatted_string(block_number) + ".v" + block_version_to_formatted_string(block_version);
-}
-
-string resolve_text_filename(int block_number, int block_version)
-{
-	return resolve_json_filename(block_number, block_version) + ".txt";
-}
-
-string resolve_output_filename(int block_number, int block_version)
-{
-	return resolve_json_filename(block_number, block_version);
 }
 
 int main(int argc, char* args[])
@@ -108,15 +98,16 @@ int main(int argc, char* args[])
 
 	int block_number = stoi(args[1]);
 	int block_version = stoi(args[2]);
-	string filename = resolve_json_filename(block_number, block_version).c_str();
+	string filename = resolve_filename(block_number, block_version).c_str();
+	string tempfile = tmpnam(nullptr);
 
 	cout << "sorter.exe version: " << VERSION << endl;
 
 	JsonParser* parser = new JsonParser();
-	parser->parse(filename);
+	parser->parse(filename,tempfile);
 
 	ifstream text_file;
-	text_file.open(resolve_text_filename(block_number, block_version));
+	text_file.open(tempfile);
 
 	map<string, int> m = map<string, int>();
 	string word;
@@ -131,7 +122,7 @@ int main(int argc, char* args[])
 	text_file.close();
 	delete parser;
 
-	filename = resolve_output_filename(block_number, block_version + 1).c_str();
+	filename = resolve_filename(block_number, block_version + 1).c_str();
 	ofstream output;
 	output.open(filename.c_str());
 
@@ -141,7 +132,7 @@ int main(int argc, char* args[])
 
 	output.close();
 
-	remove(resolve_text_filename(block_number, block_version).c_str());
+	remove(tempfile.c_str());
 
 	chrono::system_clock::time_point end = chrono::system_clock::now();
 	chrono::duration<double> diff = end - start;

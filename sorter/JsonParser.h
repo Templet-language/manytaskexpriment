@@ -155,14 +155,14 @@ public:
 
 	MyHandler handler;
 
-	void parse(string filename)
+	void parse(string&filename,string&tempfile)
 	{
 		fopen_s(&file, filename.c_str(), "r");
 		if (file == NULL) {
 		    throw exception();
 		} else {
 			rapidjson::FileReadStream in(file, readBuffer, sizeof(readBuffer));
-			handler.fout.open(filename.append(".txt"));
+			handler.fout.open(tempfile);
 			rapidjson::Reader reader;
 			int counter = 0;
 			while (!reader.Parse(in, handler)) {
