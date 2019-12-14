@@ -1,0 +1,63 @@
+// time of each operation 
+
+// number of VM = 10
+// real dataset (about a week from June 1, 2016) 
+// 80 flumedata blocks, 8 blocks in one file
+// computation time (including all drawbacks) = 274.694 s
+
+prepare[0]=69.13;
+prepare[1]=70.451;
+prepare[2]=68.742;
+prepare[3]=68.5179;
+prepare[4]=70.529;
+prepare[5]=70.504;
+prepare[6]=65.904;
+prepare[7]=66.835;
+prepare[8]=74.654;
+prepare[9]=74.214;
+
+play[0][1]=18.347;
+play[0][2]=10.136;
+play[0][3]=13.6544;
+play[0][4]=17.2537;
+play[0][5]=7.006;
+play[0][6]=9.731;
+play[0][7]=9.732;
+play[0][8]=10.181;
+play[0][9]=10.3889;
+play[1][2]=11.009;
+play[1][3]=12.713;
+play[1][4]=15.094;
+play[1][5]=7.27673;
+play[1][6]=8.20182;
+play[1][7]=10.7831;
+play[1][8]=11.373;
+play[1][9]=10.459;
+play[2][3]=13.471;
+play[2][4]=14.278;
+play[2][5]=7.26773;
+play[2][6]=8.54085;
+play[2][7]=8.89189;
+play[2][8]=11.0911;
+play[2][9]=11.4541;
+play[3][4]=16.257;
+play[3][5]=8.259;
+play[3][6]=7.855;
+play[3][7]=8.279;
+play[3][8]=9.533;
+play[3][9]=12.162;
+play[4][5]=8.044;
+play[4][6]=9.38094;
+play[4][7]=8.752;
+play[4][8]=9.324;
+play[4][9]=9.78;
+play[5][6]=16;
+play[5][7]=8.714;
+play[5][8]=11.476;
+play[5][9]=14.579;
+play[6][7]=9.08;
+play[6][8]=11.01;
+play[6][9]=11.379;
+play[7][8]=10.622;
+play[7][9]=12.503;
+play[8][9]=14.0054;
