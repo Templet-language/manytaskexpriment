@@ -5,6 +5,21 @@
 // 80 flumedata blocks, 8 blocks in one file
 // computation time (including all drawbacks) = 274.694 s
 
+// emulation
+NUM_BLOCKS = 10
+TRIVIAL_ALGORITHM
+T1 = 1194.81
+Tp = 289.811
+Pmax = 10
+Smax = 4.12271
+
+NUM_BLOCKS = 10
+OPTIMIZED_ALGORITHM
+T1 = 1194.81
+Tp = 236.49
+Pmax = 10
+Smax = 5.05227
+
 prepare[0]=69.13;
 prepare[1]=70.451;
 prepare[2]=68.742;
